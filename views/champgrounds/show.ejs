@@ -1,0 +1,56 @@
+<%- include('../partials/header') -%>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <p class="lead">YelpCamp</p>
+            <div class="list-group">
+                <li class="list-group-item active">info 1</li>
+                <li class="list-group-item ">info 2</li>
+                <li class="list-group-item ">info 3</li>
+            </div>
+        </div>
+        <div class="col-md-9">
+            <div class="thumbnail">
+                <img class="img-responsive" src="<%= champground.image %>">
+                <div class="caption-full">
+                    <h4 class="pull-right">$9.00/DAY</h4>
+                    <h3><a><%= champground.name%></a></h3>
+                    <p><%= champground.description%></p>
+                    <p><em>Submitted by <%=champground.author.username %></em></p>
+
+                    <%if(currentUser && champground.author.id.equals(currentUser._id)){%>
+                        <a class="btn btn-xs btn-warning" href="/champgrounds/<%=champground._id%>/edit">Edit</a>
+                        <form id="delet-form" action="/champgrounds/<%=champground._id%>?_method=DELETE" method="POST">
+                            <button class="btn btn-xs btn-danger">Delete</button>
+                        </form>
+                    <% } %>
+                </div>
+            </div>
+            <div class="well">
+                <div class="text-right">
+                    <a class="btn btn-danger btn-large" href="/champgrounds/<%=champground._id%>/comments/new">Add Newcomment</a>
+                </div>
+                <hr>
+                <% champground.comments.forEach(function(comment){ %>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <strong><%= comment.author.username%></strong>
+                            <span class="pull-right">10 Days ago</span>
+                            <p>
+                                <%= comment.text %>
+                            </p>
+                            <% if(currentUser && comment.author.id.equals(currentUser._id)){ %>
+                                <a class="btn btn-xs btn-warning" href="/champgrounds/<%= champground._id %>/comments/<%=comment._id %>/edit">Edit</a>
+                                <form id="delet-form" action="/champgrounds/<%= champground._id %>/comments/<%=comment._id %>?_method=DELETE" method="POST" >
+                                    <button class="btn btn-xs btn-danger ">Delete</button>
+                                </form>
+                            <% } %>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+        </div>
+    </div>
+</div>
+ <%- include('../partials/fotter') -%>

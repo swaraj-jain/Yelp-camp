@@ -1,0 +1,20 @@
+/*body{
+    min-width: 100vh;
+    min-height: 100vh;
+    background: url(https://thumbs.gfycat.com/PastChillyAnkolewatusi-small.gif);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}*/
+.thumbnail{
+    padding: 0%;
+}
+.thumbnail img{
+    width: 100%;
+}
+.thumbnail .caption-full{
+    padding: 9px;
+}
+#delet-form{
+    display: inline;
+}
