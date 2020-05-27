@@ -11,10 +11,8 @@ var express       =require("express"),
     User          =require("./models/user"),
     seedDB        =require("./seed");
 
-console.log(process.env.DATABASEURL);
-mongoose.connect("mongodb://localhost/yelp_champ_v11");
-//mongodb+srv://yelp:Password1@yelp-lsauu.mongodb.net/test?retryWrites=true&w=majority
-//mongodb://localhost/yelp_champ_v11
+mongoose.connect(process.env.DATABASEURL);
+
 
 
 app.use(bodyparser.urlencoded({extended: true}));
