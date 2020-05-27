@@ -11,9 +11,9 @@ var express       =require("express"),
     User          =require("./models/user"),
     seedDB        =require("./seed");
 
-mongoose.connect(process.env.DATABASEURL);
 
-
+var url=process.env.DATABASEURL || "mongodb://localhost/yelp_champ_v11";
+mongoose.connect(url);
 
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
