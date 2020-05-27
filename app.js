@@ -12,7 +12,7 @@ var express       =require("express"),
     seedDB        =require("./seed");
 
 
-mongoose.connect("mongodb://localhost/yelp_champ_v12");
+mongoose.connect("mongodb+srv://yelp:Password1@yelp-lsauu.mongodb.net/test?retryWrites=true&w=majority");
 app.use(bodyparser.urlencoded({extended: true}));
 app.set("view engine","ejs");
 app.use(express.static(__dirname + "/public"));
