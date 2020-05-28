@@ -1,11 +1,13 @@
-/*body{
+#notallbody{
     min-width: 100vh;
     min-height: 100vh;
-    background: url(https://thumbs.gfycat.com/PastChillyAnkolewatusi-small.gif);
+    /*background: url(https://cdn.pixabay.com/photo/2014/11/27/18/36/tent-548022_1280.jpg);*/
+    /*background: url(https://cdn.pixabay.com/photo/2016/02/18/22/16/tent-1208201_1280.jpg);*/
+    background: url(https://cdn.pixabay.com/photo/2017/04/05/01/11/bridge-2203661_1280.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-}*/
+}
 .thumbnail{
     padding: 0%;
 }
@@ -17,4 +19,29 @@
 }
 #delet-form{
     display: inline;
+}
+
+#yup{
+    text-align: center;
+    padding-top: 15%;
+    color: #ffffff;
+    font-size: medium;
+    text-shadow:0px 4px 3px rgb(226, 148, 148),
+                0px 8px 13px rgb(241, 199, 120),
+                0px 12px 20px rgb(185, 192, 233);
+}
+#yo1{
+    font-size: 60px;
+}
+#yo2{
+    font-size: 30px;
+}
+#onlylandingbackground{
+    background: url(https://www.jamesgphotography.co.uk/wp-content/uploads/2016/11/Great-Gable-Terra-Nova-Ultra-Quasar-Wild-Camping-Photography-Workshop.jpg);
+    /*background: url(https://media.gettyimages.com/photos/father-and-son-camping-together-picture-id833226490?s=2048x2048);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-width: 100vw;
+    min-height: 100vh;
 }
